@@ -1,0 +1,10 @@
+1. What am I doing currently ?
+=> I just started work now, my goal is to finish the web agency portfolio website. I'm currently working on the home page.
+I need to organize my thoughts about what I'm going to do step by step. I'm going to do that in the next hour.
+ steps for the next 1 hr, currently 2:20pm Monday 1st Jan 2024 so I should be finished by the navbar at least by 3:20pm.
+    1. Remove the old navbar code.
+    2. install framer motion.
+    3. implement the logic of normal navbar.
+    4. implement the logic of mobile navbar.
+    5. implement the logic of animating navbar.
+    6. code rest of the the hero section logic.
