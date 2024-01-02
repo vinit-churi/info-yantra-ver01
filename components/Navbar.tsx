@@ -1,164 +1,149 @@
 "use client";
-
-import * as React from "react";
 import Link from "next/link";
-
-import { cn } from "@/lib/utils";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu";
 import Image from "next/image";
-
-const components: { title: string; href: string; description: string }[] = [
-  {
-    title: "Alert Dialog",
-    href: "/docs/primitives/alert-dialog",
-    description:
-      "A modal dialog that interrupts the user with important content and expects a response.",
-  },
-  {
-    title: "Hover Card",
-    href: "/docs/primitives/hover-card",
-    description:
-      "For sighted users to preview content available behind a link.",
-  },
-  {
-    title: "Progress",
-    href: "/docs/primitives/progress",
-    description:
-      "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
-  },
-  {
-    title: "Scroll-area",
-    href: "/docs/primitives/scroll-area",
-    description: "Visually or semantically separates content.",
-  },
-  {
-    title: "Tabs",
-    href: "/docs/primitives/tabs",
-    description:
-      "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
-  },
-  {
-    title: "Tooltip",
-    href: "/docs/primitives/tooltip",
-    description:
-      "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
-  },
-];
-
-/*
-home 
-about us
-service >
-contact us
-explore >
-
-
-get started [button]
-*/
+import { Button, buttonVariants } from "@/components/ui/button";
+import { useState } from "react";
+import { MdKeyboardArrowDown } from "react-icons/md";
 
 export default function Navbar() {
+  const [showServices, setShowServices] = useState(false);
+  const [showExplore, setShowExplore] = useState(false);
+  function mouseEnterLink(id: string) {
+    if (id === "services") {
+      setShowServices(true);
+    } else {
+      setShowExplore(true);
+    }
+  }
+
+  function mouseLeaveLink(id: string) {
+    if (id === "services") {
+      setShowServices(false);
+    } else {
+      setShowExplore(false);
+    }
+  }
   return (
-    <NavigationMenu className="h-[96px] max-h-[1280px] mx-auto flex items-center">
-      <NavigationMenuList>
-        <NavigationMenuItem>
-          <NavigationMenuLink asChild>
+    <nav className="relative z-10 h-[96px] border-b border-[#DCDCDE] border-solid">
+      <div className="flex w-[90%] max-w-[1280px] items-center h-full mx-auto justify-between">
+        <Link
+          href="/"
+          className="flex items-center space-x-2 no-underline outline-none focus:shadow-md"
+        >
+          <Image
+            src="/images/Logo_ver06.svg"
+            alt="shadcn/ui"
+            width={200}
+            height={100}
+          />
+        </Link>
+        <ul className="flex items-center gap-6">
+          <li className="">
             <Link
               href="/"
-              className="flex items-center space-x-2 no-underline outline-none focus:shadow-md"
+              className="font-medium hover:text-orange-600 transition-colors duration-300 ease-in-out"
             >
-              <Image
-                src="/images/Logo_ver06.svg"
-                alt="shadcn/ui"
-                // height={32}
-                width={200}
-                height={100}
-              />
+              Home
             </Link>
-          </NavigationMenuLink>
-        </NavigationMenuItem>
-        <div className="flex gap-4">
-          <NavigationMenuItem className="">
-            <Link href="/" legacyBehavior passHref>
-              <NavigationMenuLink
-                className={`${navigationMenuTriggerStyle()} bg-transparent hover:bg-transparent hover:text-textSecondary`}
+          </li>
+          <li className="">
+            <Link
+              href="/"
+              className="font-medium hover:text-orange-600 transition-colors duration-300 ease-in-out"
+            >
+              About Us
+            </Link>
+          </li>
+          <li className="">
+            <div
+              className="relative"
+              onClick={() => setShowServices(!showServices)}
+              onMouseLeave={() => mouseLeaveLink("services")}
+              onMouseEnter={() => mouseEnterLink("services")}
+            >
+              {/* <Button variant={"default"}>Services</Button> */}
+              <span
+                className={`cursor-pointer relative z-20 py-6 font-medium flex items-center gap-1 ${
+                  showServices
+                    ? "text-orange-600 transition-colors duration-300 ease-in-out"
+                    : null
+                }`}
               >
-                Home
-              </NavigationMenuLink>
+                Services <MdKeyboardArrowDown />
+              </span>
+              <ul
+                className={`absolute top-0 mt-16 w-[125px]  bg-white rounded-lg ${
+                  showServices ? "" : "hidden"
+                }`}
+              >
+                <li className="px-4 py-1 hover:bg-orange-600 hover:text-white transition-colors duration-300 ease-in-out rounded-t-lg">
+                  <Link href="/" className="">
+                    Services
+                  </Link>
+                </li>
+                <li className="px-4 py-1 hover:bg-orange-600 hover:text-white transition-colors duration-300 ease-in-out">
+                  <Link href="/" className="">
+                    Pricing Plan
+                  </Link>
+                </li>
+                <li className="px-4 py-1 hover:bg-orange-600 hover:text-white transition-colors duration-300 ease-in-out rounded-b-lg">
+                  <Link href="/" className="">
+                    Portfolio
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li className="hover:text-orange-600 transition-colors duration-300 ease-in-out">
+            <Link href="/" className="font-medium">
+              Contact Us
             </Link>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <Link href="/about-us" legacyBehavior passHref>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                About us
-              </NavigationMenuLink>
+          </li>
+          <li className=" ">
+            <div
+              className="relative w-full"
+              onClick={() => setShowExplore(!showExplore)}
+              onMouseLeave={() => mouseLeaveLink("explore")}
+              onMouseEnter={() => mouseEnterLink("explore")}
+            >
+              <span
+                className={`cursor-pointer relative z-20 font-medium flex items-center gap-1 py-6 ${
+                  showExplore
+                    ? "text-orange-600 transition-colors duration-300 ease-in-out"
+                    : null
+                }`}
+              >
+                Explore <MdKeyboardArrowDown />
+              </span>
+              <ul
+                className={`absolute top-0 mt-16 w-[125px]  bg-white rounded-lg ${
+                  showExplore ? "" : "hidden"
+                }`}
+              >
+                <li className="px-4 py-1 hover:bg-orange-600 hover:text-white transition-colors duration-300 ease-in-out rounded-t-lg">
+                  <Link href="/">FAQs</Link>
+                </li>
+                <li className="px-4 py-1 hover:bg-orange-600 hover:text-white transition-colors duration-300 ease-in-out">
+                  <Link href="/">Team</Link>
+                </li>
+                <li className="px-4 py-1 hover:bg-orange-600 hover:text-white transition-colors duration-300 ease-in-out rounded-b-lg">
+                  <Link href="/">Blog</Link>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <Link
+              href="/"
+              className={`${buttonVariants({
+                variant: "outline",
+              })} font-semibold custom-button-background text-white px-6 py-6 text-lg rounded-md hover:text-white transition-colors duration-300 ease-in-out`}
+            >
+              Get a Quote
             </Link>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            {/* services */}
-            <NavigationMenuTrigger className="data-[state=open]:bg-purple-600">
-              Services
-            </NavigationMenuTrigger>
-            <NavigationMenuContent className=" w-[900px] top-0 right-0 left-auto absolute">
-              <div>inner content of services</div>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <Link href="/contact-us" legacyBehavior passHref>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                Contact Us
-              </NavigationMenuLink>
-            </Link>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            {/* Explore */}
-            <NavigationMenuTrigger>Explore</NavigationMenuTrigger>
-            <NavigationMenuContent className=" w-[900px] top-0 right-0 left-auto absolute">
-              inner content of explore
-            </NavigationMenuContent>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <Link href="/get-started" legacyBehavior passHref>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                Get Started
-              </NavigationMenuLink>
-            </Link>
-          </NavigationMenuItem>
-        </div>
-      </NavigationMenuList>
-    </NavigationMenu>
+          </li>
+        </ul>
+      </div>
+    </nav>
   );
 }
-
-const ListItem = React.forwardRef<
-  React.ElementRef<"a">,
-  React.ComponentPropsWithoutRef<"a">
->(({ className, title, children, ...props }, ref) => {
-  return (
-    <li>
-      <NavigationMenuLink asChild>
-        <a
-          ref={ref}
-          className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-            className
-          )}
-          {...props}
-        >
-          <div className="text-sm font-medium leading-none">{title}</div>
-          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-            {children}
-          </p>
-        </a>
-      </NavigationMenuLink>
-    </li>
-  );
-});
-ListItem.displayName = "ListItem";
