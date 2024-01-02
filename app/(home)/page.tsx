@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { FaPlay } from "react-icons/fa";
 export default function Home() {
   return (
-    <main className="relative h-screen min-h-[600px] z-30 isolate">
+    <main className="relative h-screen min-h-[600px] z-10 ">
       {/* <Image src="/images/bg_header_1.jpg" fill alt="bg-one" /> */}
       <div className="w-[90%] max-w-[1280px]  mx-auto flex  justify-between">
         <div className="flex flex-col justify-center">

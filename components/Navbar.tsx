@@ -7,7 +7,9 @@ import { MdKeyboardArrowDown } from "react-icons/md";
 
 export default function Navbar() {
   const [showServices, setShowServices] = useState(false);
+  const [onServiceList, setOnServiceList] = useState(false); // ["services", "pricing", "portfolio"
   const [showExplore, setShowExplore] = useState(false);
+  const [onExploreList, setOnExploreList] = useState(false); // ["faqs", "team", "blog"]
   function mouseEnterLink(id: string) {
     if (id === "services") {
       setShowServices(true);
@@ -24,7 +26,7 @@ export default function Navbar() {
     }
   }
   return (
-    <nav className="relative z-10 h-[96px] border-b border-[#DCDCDE] border-solid">
+    <nav className="relative z-50 h-[96px] border-b border-[#DCDCDE] border-solid ">
       <div className="flex w-[90%] max-w-[1280px] items-center h-full mx-auto justify-between">
         <Link
           href="/"
@@ -63,8 +65,8 @@ export default function Navbar() {
             >
               {/* <Button variant={"default"}>Services</Button> */}
               <span
-                className={`cursor-pointer relative z-20 py-8 font-medium flex items-center gap-1 ${
-                  showServices
+                className={`cursor-pointer relative z-50 py-8 font-medium flex items-center gap-1 ${
+                  showServices || onServiceList
                     ? "text-orange-600 transition-colors duration-300 ease-in-out"
                     : null
                 }`}
@@ -72,8 +74,11 @@ export default function Navbar() {
                 Services <MdKeyboardArrowDown />
               </span>
               <ul
-                className={`absolute top-0 mt-16 w-[125px] z-30  bg-white rounded-lg ${
-                  showServices ? "" : "hidden"
+                onClick={() => setOnServiceList(false)}
+                onMouseEnter={() => setOnServiceList(true)}
+                onMouseLeave={() => setOnServiceList(false)}
+                className={`absolute top-0 mt-16 w-[125px] z-[100]  bg-white rounded-lg  ${
+                  showServices || onServiceList ? "" : "hidden"
                 }`}
               >
                 <li className="px-4 py-1 hover:bg-orange-600 hover:text-white transition-colors duration-300 ease-in-out rounded-t-lg">
@@ -108,7 +113,7 @@ export default function Navbar() {
             >
               <span
                 className={`cursor-pointer relative z-20 font-medium flex items-center gap-1 py-6 ${
-                  showExplore
+                  showExplore || onExploreList
                     ? "text-orange-600 transition-colors duration-300 ease-in-out"
                     : null
                 }`}
@@ -116,8 +121,11 @@ export default function Navbar() {
                 Explore <MdKeyboardArrowDown />
               </span>
               <ul
-                className={`absolute top-0 mt-16 w-[125px]  bg-white rounded-lg ${
-                  showExplore ? "" : "hidden"
+                onClick={() => setOnExploreList(false)}
+                onMouseEnter={() => setOnExploreList(true)}
+                onMouseLeave={() => setOnExploreList(false)}
+                className={`absolute top-0 mt-16 w-[125px]  bg-white rounded-lg  z-[200] ${
+                  showExplore || onExploreList ? "" : "hidden"
                 }`}
               >
                 <li className="px-4 py-1 hover:bg-orange-600 hover:text-white transition-colors duration-300 ease-in-out rounded-t-lg">
