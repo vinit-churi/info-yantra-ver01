@@ -18,8 +18,8 @@ export default function Home() {
             You’ve got a business, we have got brilliant minds.
           </h1>
           <p className="w-[544px] text-slate-900/50">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-            tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+            Partner with us for a stunning online presence that aligns with your
+            goals. Our team crafts tailored websites for a lasting impression.
           </p>
           <div className="flex items-center gap-3 mt-4">
             <Button className="custom-button-background px-8 py-6">
