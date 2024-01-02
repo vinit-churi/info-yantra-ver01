@@ -63,7 +63,7 @@ export default function Navbar() {
             >
               {/* <Button variant={"default"}>Services</Button> */}
               <span
-                className={`cursor-pointer relative z-20 py-6 font-medium flex items-center gap-1 ${
+                className={`cursor-pointer relative z-20 py-8 font-medium flex items-center gap-1 ${
                   showServices
                     ? "text-orange-600 transition-colors duration-300 ease-in-out"
                     : null
@@ -72,7 +72,7 @@ export default function Navbar() {
                 Services <MdKeyboardArrowDown />
               </span>
               <ul
-                className={`absolute top-0 mt-16 w-[125px]  bg-white rounded-lg ${
+                className={`absolute top-0 mt-16 w-[125px] z-30  bg-white rounded-lg ${
                   showServices ? "" : "hidden"
                 }`}
               >
