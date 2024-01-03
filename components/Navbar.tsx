@@ -26,7 +26,7 @@ export default function Navbar() {
     }
   }
   return (
-    <nav className="relative z-50 h-[96px] border-b border-[#DCDCDE] border-solid ">
+    <nav className="absolute top-0 z-50 h-[96px] border-b border-[#DCDCDE] border-solid w-full">
       <div className="flex w-[90%] max-w-[1280px] items-center h-full mx-auto justify-between">
         <Link
           href="/"
@@ -65,7 +65,7 @@ export default function Navbar() {
             >
               {/* <Button variant={"default"}>Services</Button> */}
               <span
-                className={`cursor-pointer relative z-50 py-8 font-medium flex items-center gap-1 ${
+                className={`cursor-pointer relative z-50 py-6 font-medium flex items-center gap-1 ${
                   showServices || onServiceList
                     ? "text-orange-600 transition-colors duration-300 ease-in-out"
                     : null
