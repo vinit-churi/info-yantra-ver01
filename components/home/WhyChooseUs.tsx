@@ -76,7 +76,7 @@ const WhyChooseUs = () => {
                 Premium Business Hour Support
               </h3>
               <p className="text-sm text-slate-500/80">
-                As your support team, we're here to assist you during our
+                As your support team, we&apos;re here to assist you during our
                 standard hours, Monday to Friday, from 9:00 AM to 5:00 PM.
               </p>
             </div>
