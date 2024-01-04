@@ -1,4 +1,5 @@
 import CustomerCarousel from "@/components/home/CustomerCarousel";
+import FeaturedServices from "@/components/home/FeaturedServices";
 import HeroSection from "@/components/home/HeroSection";
 import WhoWeAre from "@/components/home/WhoWeAre";
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
       <HeroSection />
       <CustomerCarousel />
       <WhoWeAre />
+      <FeaturedServices />
     </div>
   );
 }
