@@ -18,6 +18,16 @@ const config = {
       },
     },
     extend: {
+      backgroundImage: {
+        "custom_gradient-01":
+          "linear-gradient(135deg, #ffdf73 0%, #ff8534 60%)",
+        "custom_gradient-02":
+          "linear-gradient(135deg, #ff8534 0%, #ffdf73 60%)",
+      },
+      boxShadow: {
+        "custom_shadow-01":
+          "rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px",
+      },
       colors: {
         textSecondary: "#ff8534",
         border: "hsl(var(--border))",
