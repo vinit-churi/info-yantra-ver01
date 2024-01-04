@@ -27,7 +27,7 @@ const WhoWeAre = () => {
           <p className="text-sm font-bold">Years of Experience</p>
         </div>
       </div>
-      <div className="flex-[1_1_50%] relative">
+      <div className="flex-[1_1_max-content] relative">
         <Image
           src="/images/small_arrow.png"
           width={50}
