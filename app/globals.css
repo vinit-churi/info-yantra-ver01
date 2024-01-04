@@ -85,6 +85,19 @@
     rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
 }
 
+.custom-image-mask {
+  -webkit-mask-image: url("/images/mask_image.png");
+  mask-image: url("/images/mask_image.png");
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-position: center center;
+  mask-position: center center;
+  -webkit-mask-position-x: center;
+  -webkit-mask-position-y: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
 /* * {
   outline: limegreen solid 2px;
 } */
