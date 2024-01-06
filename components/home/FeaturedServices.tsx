@@ -14,7 +14,7 @@ const FeaturedServices = () => {
         You&apos;ve got a business, we have got brilliant minds
       </h2>
       <div className="flex mt-16 gap-4">
-        <div className="flex-[0_1_25%] relative top-[-30px] custom-button-background rounded-2xl p-6 pb-0 text-white">
+        <div className="flex-[0_1_25%] relative top-[-30px] custom-button-background rounded-2xl p-6 pb-2 text-white">
           <div className="h-max w-max p-3 rounded-2xl bg-white">
             <PiChatsDuotone className="text-textSecondary text-6xl" />
           </div>
@@ -22,14 +22,12 @@ const FeaturedServices = () => {
             Digital Strategy Consultation
           </h2>
           <p className="text-sm my-3 text-white">
-            Embark on a journey of digital success with our personalized
-            consultation services. We provide expert guidance, helping you
-            define and implement effective digital strategies aligned with your
-            unique business goals. Let&apos;s shape your digital future
-            together.
+            Embark on a digital success journey with personalized consultation.
+            Get expert guidance for effective strategies aligned with your
+            business goals.
           </p>
         </div>
-        <div className="flex-[0_1_25%] custom-shadow-one text-black rounded-2xl p-6 pb-0">
+        <div className="flex-[0_1_25%] custom-shadow-one text-black rounded-2xl p-6 pb-2">
           <div className="h-max w-max p-3 rounded-2xl bg-textSecondary">
             <CgWebsite className="text-white text-6xl" />
           </div>
@@ -37,13 +35,12 @@ const FeaturedServices = () => {
             Website Design and Development
           </h2>
           <p className="text-sm my-3 text-slate-500/70">
-            We specialize in crafting visually stunning and user-friendly
-            websites tailored to your unique needs. Our goal is to establish a
-            compelling online presence for your business, bringing your vision
-            to life through thoughtful design and robust development.
+            Craft visually stunning, user-friendly websites tailored to your
+            unique needs. Establish a compelling online presence through
+            thoughtful design and robust development.
           </p>
         </div>
-        <div className="flex-[0_1_25%] custom-button-background relative top-[-30px] rounded-2xl p-6 pb-0 text-white">
+        <div className="flex-[0_1_25%] custom-button-background relative top-[-30px] rounded-2xl p-6 pb-2 text-white">
           <div className="h-max w-max p-3 rounded-2xl bg-white">
             <MdOutlineScreenSearchDesktop className="text-textSecondary text-6xl" />
           </div>
@@ -51,22 +48,20 @@ const FeaturedServices = () => {
             Search Engine Optimization
           </h2>
           <p className="text-sm my-3">
-            Boosting your online visibility is our expertise. Through strategic
-            SEO practices, we ensure your website not only attracts organic
-            traffic but also climbs the ranks on search engines, making you
-            stand out in the digital landscape.
+            Boost online visibility with strategic SEO practices. Ensure your
+            website attracts organic traffic and climbs search engine ranks,
+            standing out in the digital landscape.
           </p>
         </div>
-        <div className="flex-[0_1_25%] custom-shadow-one text-black rounded-2xl p-6 pb-0">
+        <div className="flex-[0_1_25%] custom-shadow-one text-black rounded-2xl p-6 pb-2">
           <div className="h-max w-max p-3 rounded-2xl bg-textSecondary">
             <MdOutlineProductionQuantityLimits className="text-white text-6xl" />
           </div>
           <h2 className="mt-6 text-3xl font-medium">E-Commerce Solutions</h2>
           <p className="text-sm my-3 text-slate-500/70">
-            Our team excels at developing and optimizing online stores,
-            providing you with a secure and efficient platform to showcase and
-            sell your products or services. We create seamless and engaging
-            e-commerce experiences for your customers.
+            Excel in developing and optimizing online stores. Get a secure
+            platform to showcase and sell your products, creating seamless
+            e-commerce experiences for customers.
           </p>
         </div>
       </div>

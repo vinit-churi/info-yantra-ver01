@@ -8,7 +8,7 @@ import Image from "next/image";
 
 const WhyChooseUs = () => {
   return (
-    <div className="bg-[url('/images/bg_header_2.png')] py-[122px]">
+    <div className="bg-[url('/images/bg_header_2.png')] bg-cover bg-center bg-no-repeat py-[122px]">
       <div className="w-[90%] max-w-[1280px] mx-auto flex justify-between gap-[80px]">
         <div className="flex-[0_1_640px] p-4 relative pt-16 ">
           <p className="text-textSecondary/50 font-semibold">WHY CHOOSE US</p>
