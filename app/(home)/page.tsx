@@ -1,5 +1,6 @@
 import ChoosePlan from "@/components/home/ChoosePlan";
 import CustomerCarousel from "@/components/home/CustomerCarousel";
+import DiscoverMore from "@/components/home/DiscoverMore";
 import FeaturedServices from "@/components/home/FeaturedServices";
 import HeroSection from "@/components/home/HeroSection";
 import Stats from "@/components/home/Stats";
@@ -15,6 +16,7 @@ export default function Home() {
       <Stats />
       <WhyChooseUs />
       <ChoosePlan />
+      <DiscoverMore />
     </div>
   );
 }
