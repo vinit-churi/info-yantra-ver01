@@ -4,8 +4,8 @@ import { MdSpeakerNotes } from "react-icons/md";
 import { buttonVariants } from "../ui/button";
 const DiscoverMore = () => {
   return (
-    <div className="bg-[url('/images/boost.jpg')] bg-cover bg-no-repeat bg-center mt-28">
-      <div className="mx-auto w-[90%] max-w-[1280px] py-28 flow-root text-white">
+    <div className="bg-[url('/images/boost.jpg')] bg-cover bg-no-repeat bg-right-top mt-28">
+      <div className="mx-auto w-[90%] max-w-[1280px] py-28 pb-20 flow-root text-white">
         <div className="h-max w-max p-5 mx-auto  rounded-2xl bg-textSecondary">
           <MdSpeakerNotes className="text-white text-6xl" />
         </div>
