@@ -151,6 +151,25 @@ const ChoosePlan = () => {
           </p>
         </div>
       </div>
+      <div>
+        <h3 className="text-center text-3xl font-semibold">
+          Need custom services?
+        </h3>
+        <p className="text-center w-[90%] max-w-[550px] mx-auto my-6 text-slate-400/80">
+          Explore our tailored solutions crafted to meet your unique needs. We
+          specialize in providing customized services that elevate your
+          business, ensuring a seamless and effective experience for your
+          audience.
+        </p>
+        <Link
+          href="/"
+          className={`${buttonVariants({
+            variant: "outline",
+          })} my-6  !flex justify-center w-max items-center mx-auto font-semibold custom-button-background after:contents-[''] relative after:absolute after:inset-0 after:rounded-md after:opacity-0 after:hover:opacity-100 after:transition-opacity after:duration-300 after:ease-in-out after:bg-custom_gradient-02 text-white px-6 py-4 text-lg rounded-md hover:text-white transition-colors duration-300 ease-in-out`}
+        >
+          <p className="relative z-10">CONTACT US</p>
+        </Link>
+      </div>
     </div>
   );
 };
