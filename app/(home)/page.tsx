@@ -3,6 +3,7 @@ import CustomerCarousel from "@/components/home/CustomerCarousel";
 import DiscoverMore from "@/components/home/DiscoverMore";
 import FeaturedServices from "@/components/home/FeaturedServices";
 import HeroSection from "@/components/home/HeroSection";
+import OurProject from "@/components/home/OurProject";
 import Stats from "@/components/home/Stats";
 import TopServices from "@/components/home/TopServices";
 import WhoWeAre from "@/components/home/WhoWeAre";
@@ -19,6 +20,7 @@ export default function Home() {
       <ChoosePlan />
       <DiscoverMore />
       <TopServices />
+      <OurProject />
     </div>
   );
 }
