@@ -5,6 +5,8 @@ import { GrOptimize } from "react-icons/gr";
 import { BsBodyText } from "react-icons/bs";
 import { FaShopify } from "react-icons/fa";
 import { FaMobileAlt } from "react-icons/fa";
+import Link from "next/link";
+import { buttonVariants } from "../ui/button";
 
 const TopServices = () => {
   return (
@@ -37,6 +39,14 @@ const TopServices = () => {
               Crafting visually stunning websites tailored to your brand,
               ensuring a seamless user experience and optimal functionality.
             </p>
+            <Link
+              href="/"
+              className={`${buttonVariants({
+                variant: "outline",
+              })} font-semibold bg-transparent mt-6 hover:bg-orange-300 border-2 border-orange-300 border-solid text-white px-6 py-4 text-lg rounded-md hover:text-white transition-colors duration-300 ease-in-out`}
+            >
+              <p className="relative z-10">Learn more</p>
+            </Link>
           </div>
         </div>
         <div className="shadow-custom_shadow-00 rounded-xl h-[300px] group overflow-hidden">
@@ -60,6 +70,14 @@ const TopServices = () => {
               Elevating online presence through strategic digital marketing,
               maximizing reach, engagement, and conversion for business growth.
             </p>
+            <Link
+              href="/"
+              className={`${buttonVariants({
+                variant: "outline",
+              })} font-semibold bg-transparent mt-6 hover:bg-orange-300 border-2 border-orange-300 border-solid text-white px-6 py-4 text-lg rounded-md hover:text-white transition-colors duration-300 ease-in-out`}
+            >
+              <p className="relative z-10">Learn more</p>
+            </Link>
           </div>
         </div>
         <div className="shadow-custom_shadow-00 rounded-xl h-[300px] group overflow-hidden">
@@ -83,6 +101,14 @@ const TopServices = () => {
               Boosting online visibility and climbing search engine ranks with
               proven SEO strategies, standing out in the digital landscape.
             </p>
+            <Link
+              href="/"
+              className={`${buttonVariants({
+                variant: "outline",
+              })} font-semibold bg-transparent mt-6 hover:bg-orange-300 border-2 border-orange-300 border-solid text-white px-6 py-4 text-lg rounded-md hover:text-white transition-colors duration-300 ease-in-out`}
+            >
+              <p className="relative z-10">Learn more</p>
+            </Link>
           </div>
         </div>
         <div className="shadow-custom_shadow-00 rounded-xl h-[300px] group overflow-hidden">
@@ -108,6 +134,14 @@ const TopServices = () => {
               enhance engagement, and drive meaningful connections with your
               target audience.
             </p>
+            <Link
+              href="/"
+              className={`${buttonVariants({
+                variant: "outline",
+              })} font-semibold bg-transparent mt-6 hover:bg-orange-300 border-2 border-orange-300 border-solid text-white px-6 py-4 text-lg rounded-md hover:text-white transition-colors duration-300 ease-in-out`}
+            >
+              <p className="relative z-10">Learn more</p>
+            </Link>
           </div>
         </div>
         <div className="shadow-custom_shadow-00 rounded-xl h-[300px] group overflow-hidden">
@@ -133,6 +167,14 @@ const TopServices = () => {
               seamless platform to showcase and sell products or services
               effectively.
             </p>
+            <Link
+              href="/"
+              className={`${buttonVariants({
+                variant: "outline",
+              })} font-semibold bg-transparent mt-6 hover:bg-orange-300 border-2 border-orange-300 border-solid text-white px-6 py-4 text-lg rounded-md hover:text-white transition-colors duration-300 ease-in-out`}
+            >
+              <p className="relative z-10">Learn more</p>
+            </Link>
           </div>
         </div>
         <div className="shadow-custom_shadow-00 rounded-xl h-[300px] group overflow-hidden">
@@ -158,6 +200,14 @@ const TopServices = () => {
               experiences, align with business goals, and stay ahead in the
               digital evolution.
             </p>
+            <Link
+              href="/"
+              className={`${buttonVariants({
+                variant: "outline",
+              })} font-semibold bg-transparent mt-6 hover:bg-orange-300 border-2 border-orange-300 border-solid text-white px-6 py-4 text-lg rounded-md hover:text-white transition-colors duration-300 ease-in-out`}
+            >
+              <p className="relative z-10">Learn more</p>
+            </Link>
           </div>
         </div>
       </div>
