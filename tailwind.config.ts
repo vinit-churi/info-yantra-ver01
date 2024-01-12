@@ -23,6 +23,8 @@ const config = {
           "linear-gradient(135deg, #ffdf73 0%, #ff8534 60%)",
         "custom_gradient-02":
           "linear-gradient(135deg, #ff8534 0%, #ffdf73 60%)",
+        custom_transparent:
+          "radial-gradient(at center center, #FFFFFF00 0%, #FFFFFF 70%)",
       },
       boxShadow: {
         "custom_shadow-00": "rgba(149, 157, 165, 0.2) 0px 8px 24px",

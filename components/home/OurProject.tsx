@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { IoRocketOutline } from "react-icons/io5";
-import { VscGraph } from "react-icons/vsc";
+
 const OurProject = () => {
   return (
     <div className="w-[90%] relative max-w-[1280px] mx-auto mt-[130px] flex gap-16">

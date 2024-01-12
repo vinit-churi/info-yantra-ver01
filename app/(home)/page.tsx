@@ -5,6 +5,7 @@ import FeaturedServices from "@/components/home/FeaturedServices";
 import HeroSection from "@/components/home/HeroSection";
 import OurProject from "@/components/home/OurProject";
 import Stats from "@/components/home/Stats";
+import Testimonials from "@/components/home/Testimonials";
 import TopServices from "@/components/home/TopServices";
 import WhoWeAre from "@/components/home/WhoWeAre";
 import WhyChooseUs from "@/components/home/WhyChooseUs";
@@ -21,6 +22,7 @@ export default function Home() {
       <DiscoverMore />
       <TopServices />
       <OurProject />
+      <Testimonials />
     </div>
   );
 }
