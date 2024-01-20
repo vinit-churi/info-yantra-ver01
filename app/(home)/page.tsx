@@ -1,4 +1,5 @@
 import ChoosePlan from "@/components/home/ChoosePlan";
+import Contact from "@/components/home/Contact";
 import CustomerCarousel from "@/components/home/CustomerCarousel";
 import DiscoverMore from "@/components/home/DiscoverMore";
 import FeaturedServices from "@/components/home/FeaturedServices";
@@ -23,6 +24,7 @@ export default function Home() {
       <TopServices />
       <OurProject />
       <Testimonials />
+      <Contact />
     </div>
   );
 }
