@@ -22,7 +22,7 @@ const Contact = () => {
           <Image
             src="/images/orange_blob_1.png"
             fill
-            className="object-contain opacity-80"
+            className="object-contain opacity-80 "
             alt="blob"
           />
           <div className=" h-full absolute w-[90%] max-w-[400px] flex items-center left-0 right-0 mx-auto z-10">
@@ -33,7 +33,6 @@ const Contact = () => {
               height="494"
               title="Get a Free consultation!"
             ></iframe>
-
             {
               <Script
                 id="tally-js"
