@@ -3,6 +3,7 @@ import Contact from "@/components/home/Contact";
 import CustomerCarousel from "@/components/home/CustomerCarousel";
 import DiscoverMore from "@/components/home/DiscoverMore";
 import FeaturedServices from "@/components/home/FeaturedServices";
+import Footer from "@/components/home/Footer";
 import HeroSection from "@/components/home/HeroSection";
 import OurProject from "@/components/home/OurProject";
 import Stats from "@/components/home/Stats";
@@ -25,6 +26,7 @@ export default function Home() {
       <OurProject />
       <Testimonials />
       <Contact />
+      <Footer />
     </div>
   );
 }
